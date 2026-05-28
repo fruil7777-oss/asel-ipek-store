@@ -1,0 +1,52 @@
+{
+  "name": "asel-ipek-store",
+  "version": "1.0.0",
+  "description": "Professional E-commerce Store for Asel Ipek Hijabs",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "^14.0.0",
+    "typescript": "^5.0.0",
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "framer-motion": "^10.16.0",
+    "zustand": "^4.4.0",
+    "firebase": "^10.0.0",
+    "@stripe/react-stripe-js": "^2.0.0",
+    "@stripe/stripe-js": "^2.0.0",
+    "stripe": "^14.0.0",
+    "next-i18next": "^14.0.0",
+    "i18next": "^23.0.0",
+    "react-i18next": "^13.0.0",
+    "axios": "^1.4.0",
+    "clsx": "^2.0.0",
+    "react-hot-toast": "^2.4.0",
+    "react-icons": "^4.11.0",
+    "@headlessui/react": "^1.7.0",
+    "@heroicons/react": "^2.0.0",
+    "sharp": "^0.33.0",
+    "next-auth": "^4.24.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.1.0",
+    "react-dropzone": "^14.2.0",
+    "image-compression": "^1.7.0",
+    "react-paginate": "^8.2.0",
+    "date-fns": "^2.30.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@tailwindcss/forms": "^0.5.0",
+    "@tailwindcss/typography": "^0.5.0"
+  }
+}
