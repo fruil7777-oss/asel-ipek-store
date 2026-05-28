@@ -2,7 +2,7 @@
 
 import { useThemeStore } from '@/store/themeStore'
 import { motion } from 'framer-motion'
-import { FiPhone, FiMail } from 'react-icons/fi'
+import { FiPhone } from 'react-icons/fi'
 import { FaWhatsapp } from 'react-icons/fa'
 import { useState } from 'react'
 
@@ -21,7 +21,7 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log('Form data:', formData)
-    alert(isArabic() ? 'شكراً لرسالتك!' : 'Thank you for your message!')
+    alert(isArabic() ? 'شكراً لرسالتك! سنتواصل معك قريباً' : 'Thank you for your message! We will contact you soon')
     setFormData({ name: '', email: '', phone: '', message: '' })
   }
 
@@ -65,6 +65,16 @@ export default function ContactPage() {
               </a>
             </div>
           </div>
+
+          <div className="flex items-start gap-4">
+            <div className="text-blue-500 text-2xl mt-1">✉️</div>
+            <div>
+              <h3 className="font-bold">{isArabic() ? 'البريد الإلكتروني' : 'Email'}</h3>
+              <a href={`mailto:${email}`} className="text-gray-600 hover:text-blue-500">
+                {email}
+              </a>
+            </div>
+          </div>
         </motion.div>
 
         <motion.form
@@ -73,27 +83,62 @@ export default function ContactPage() {
           onSubmit={handleSubmit}
           className="space-y-4 bg-white p-6 rounded-lg shadow-md"
         >
-          <input
-            type="text"
-            required
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-            placeholder={isArabic() ? 'الاسم' : 'Name'}
-          />
-          <input
-            type="email"
-            required
-            value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-            placeholder={isArabic() ? 'البريد الإلكتروني' : 'Email'}
-          />
+          <div>
+            <label className="block font-bold mb-2">
+              {isArabic() ? 'الاسم' : 'Name'}
+            </label>
+            <input
+              type="text"
+              required
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500"
+              placeholder={isArabic() ? 'أدخل اسمك' : 'Enter your name'}
+            />
+          </div>
+          <div>
+            <label className="block font-bold mb-2">
+              {isArabic() ? 'البريد الإلكتروني' : 'Email'}
+            </label>
+            <input
+              type="email"
+              required
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500"
+              placeholder={isArabic() ? 'أدخل بريدك الإلكتروني' : 'Enter your email'}
+            />
+          </div>
+          <div>
+            <label className="block font-bold mb-2">
+              {isArabic() ? 'الهاتف' : 'Phone'}
+            </label>
+            <input
+              type="tel"
+              value={formData.phone}
+              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500"
+              placeholder={isArabic() ? 'أدخل رقم هاتفك' : 'Enter your phone'}
+            />
+          </div>
+          <div>
+            <label className="block font-bold mb-2">
+              {isArabic() ? 'الرسالة' : 'Message'}
+            </label>
+            <textarea
+              required
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              rows={4}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500"
+              placeholder={isArabic() ? 'اكتب رسالتك' : 'Write your message'}
+            />
+          </div>
           <button
             type="submit"
-            className="w-full bg-rose-500 text-white py-2 rounded-lg font-bold hover:bg-rose-600"
+            className="w-full bg-rose-500 text-white py-3 rounded-lg font-bold hover:bg-rose-600 transition-all"
           >
-            {isArabic() ? 'إرسال' : 'Send'}
+            {isArabic() ? 'إرسال الرسالة' : 'Send Message'}
           </button>
         </motion.form>
       </div>
