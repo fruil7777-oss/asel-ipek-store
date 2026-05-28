@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import { useThemeStore } from '@/store/themeStore'
 import Link from 'next/link'
-import { FiArrowRight, FiArrowLeft } from 'react-icons/fi'
 
 const container = {
   hidden: { opacity: 0 },
