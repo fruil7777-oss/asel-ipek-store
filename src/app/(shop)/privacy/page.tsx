@@ -29,7 +29,7 @@ export default function PrivacyPage() {
             {isArabic()
               ? 'في Asel Ipek، نحترم خصوصيتك ونلتزم بحماية بيانات شخصية.'
               : language === 'tr'
-              ? 'Asel Ipek\\'te, gizliliğinize saygı duyuyor ve kişisel verilerinizi korumayı taahhüt ediyoruz.'
+              ? 'Asel Ipek de, gizliliğinize saygı duyuyor ve kişisel verilerinizi korumayı taahhüt ediyoruz.'
               : 'At Asel Ipek, we respect your privacy and are committed to protecting your personal data.'}
           </p>
         </section>
