@@ -13,7 +13,7 @@ export default function PrivacyPage() {
         animate={{ opacity: 1 }}
         className="text-4xl font-bold mb-8"
       >
-        {isArabic() ? 'سياسة الخصوصية' : language === 'tr' ? 'Gizlilik Politikası' : 'Privacy Policy'}
+        {isArabic() ? 'سياسة الخصوصية' : language === 'tr' ? 'Gizlilik' : 'Privacy Policy'}
       </motion.h1>
 
       <motion.div
@@ -23,13 +23,13 @@ export default function PrivacyPage() {
       >
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            {isArabic() ? 'مقدمة' : language === 'tr' ? 'Giriş' : 'Introduction'}
+            {isArabic() ? 'مقدمة' : language === 'tr' ? 'Giris' : 'Introduction'}
           </h2>
           <p>
             {isArabic()
               ? 'في Asel Ipek، نحترم خصوصيتك ونلتزم بحماية بيانات شخصية.'
               : language === 'tr'
-              ? 'Asel Ipek de, gizliliğinize saygı duyuyor ve kişisel verilerinizi korumayı taahhüt ediyoruz.'
+              ? 'Asel Ipek te gizliliginize saygi duyuyor ve kisisel verilerinizi korumayı taahhut ediyoruz.'
               : 'At Asel Ipek, we respect your privacy and are committed to protecting your personal data.'}
           </p>
         </section>
