@@ -3,6 +3,7 @@ import { Cairo } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import CartSidebar from '@/components/CartSidebar'
 
 const cairo = Cairo({ subsets: ['arabic', 'latin'] })
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <main className="pt-16 min-h-screen">
           {children}
         </main>
+        <CartSidebar />
         <Footer />
       </body>
     </html>
